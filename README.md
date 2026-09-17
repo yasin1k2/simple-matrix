@@ -17,8 +17,11 @@ Clone the repository:
 ```bash
 git clone https://github.com/yasin1k2/simple-matrix.git
 
+cd simple-matrix
 
-## Example
+python main.py
+
+Example::
 
 Please enter the number of rows: 2
 Please enter the number of columns: 3
