@@ -1,6 +1,3 @@
-# imports and global valuable
-
-
 # how many rows and columns
 def numbers_of_rows_cols():
     rows = int(input("Please enter the number of rows:"))

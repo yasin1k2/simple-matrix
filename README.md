@@ -16,3 +16,25 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/yasin1k2/simple-matrix.git
+
+
+## Example
+
+Please enter the number of rows: 2
+Please enter the number of columns: 3
+
+Please enter every row separately: 1 2 3
+Please enter every row separately: 4 5 6
+
+Sum of row 0 = 6
+Sum of row 1 = 15
+Sum of col 0 = 5
+Sum of col 1 = 7
+Sum of col 2 = 9
+
+sum of rows :[6, 15]
+sum of cols:[5, 7, 9]
+
+Do you want to do it again?(y/n): n
+
+By By..
