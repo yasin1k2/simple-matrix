@@ -1,7 +1,13 @@
 # how many rows and columns
 def numbers_of_rows_cols():
-    rows = int(input("Please enter the number of rows:"))
-    cols = int(input("Please enter the number of columns:"))
+    while True:
+        try:
+            rows = int(input("Please enter the number of rows:"))
+            cols = int(input("Please enter the number of columns:"))
+            break
+        except ValueError:
+            print("Please enter a valid value")
+
     return rows, cols
 
 
@@ -9,8 +15,15 @@ def numbers_of_rows_cols():
 def make_matrix(rows, cols):
     matrix = []
     for _ in range(rows):
-        row = list(map(int, input("Please enter every row seperetly:").split()))
-        matrix.append(row)
+        while True:
+            row = list(map(int, input("Please enter every row separately: ").split()))
+
+            if len(row) == cols:
+                matrix.append(row)
+                break
+
+            print(f"Please enter exactly {cols} numbers.")
+
     return matrix
 
 
@@ -43,12 +56,10 @@ def main():
     sum_row, sum_col = sum_row_col(matrix, rows, cols)
     print(f"sum of rows :{sum_row}\nsum of cols:{sum_col}")
 
+
 # how many time do we want to repeat
 answer = "y"
 while answer.lower() == "y":
     main()
     answer = input("\nDo you want to do it again?(y/n):")
 print("By By..")
-
-
-
