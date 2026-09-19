@@ -20,6 +20,7 @@ cd simple-matrix
 
 python main.py
 
+```
 ## Example
 
 
