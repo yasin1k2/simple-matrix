@@ -6,7 +6,6 @@ A simple Python program that gets a matrix from the user and calculates the sum 
 
 - Get the number of rows and columns from the user
 - Get matrix elements as input
-- Display the matrix
 - Calculate the sum of each row
 - Calculate the sum of each column
 
@@ -21,8 +20,10 @@ cd simple-matrix
 
 python main.py
 
-Example::
+## Example
 
+
+```text
 Please enter the number of rows: 2
 Please enter the number of columns: 3
 
@@ -40,4 +41,4 @@ sum of cols:[5, 7, 9]
 
 Do you want to do it again?(y/n): n
 
-By By..
+Goodbye!

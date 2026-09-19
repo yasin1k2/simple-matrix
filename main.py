@@ -1,9 +1,9 @@
 # how many rows and columns
-def numbers_of_rows_cols():
+def get_rows_cols():
     while True:
         try:
-            rows = int(input("Please enter the number of rows:"))
-            cols = int(input("Please enter the number of columns:"))
+            rows = int(input("Please enter the number of rows: "))
+            cols = int(input("Please enter the number of columns: "))
             break
         except ValueError:
             print("Please enter a valid value")
@@ -28,7 +28,7 @@ def make_matrix(rows, cols):
 
 
 # sum of rows and cols
-def sum_row_col(matrix, rows, cols):
+def calculate_sums(matrix, rows, cols):
     sum_row = []
     sum_col = []
     print()
@@ -51,15 +51,18 @@ def sum_row_col(matrix, rows, cols):
 
 # main
 def main():
-    rows, cols = numbers_of_rows_cols()
-    matrix = make_matrix(rows, cols)
-    sum_row, sum_col = sum_row_col(matrix, rows, cols)
-    print(f"sum of rows :{sum_row}\nsum of cols:{sum_col}")
+    answer = "y"
+    while answer.lower() == "y":
+
+        rows, cols = get_rows_cols()
+        matrix = make_matrix(rows, cols)
+        sum_row, sum_col = calculate_sums(matrix, rows, cols)
+        print(f"sum of rows : {sum_row}\nsum of cols: {sum_col}")
+
+        answer = input("\nDo you want to do it again?(y/n): ")
+    print("Goodbye!")
+    return 0
 
 
-# how many time do we want to repeat
-answer = "y"
-while answer.lower() == "y":
+if __name__ == "__main__":
     main()
-    answer = input("\nDo you want to do it again?(y/n):")
-print("By By..")
